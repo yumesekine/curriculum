@@ -10,11 +10,9 @@ public class Task1_4 {
     // 定数（条件）
     
     // ① 名前とパスワードの定数を定義してください。
-    
-
-
-
-    // 補足:
+    private static final String NAME = "alice";
+    private static final String PASS = "pass";
+     // 補足:
     //   定数は②〜⑤で使い回すために定義しておきます。
     //   final修飾子を付与すると、変数（動的に変わる値）ではなく、定数（変更不可な定まった値）となります。
     //   「ここへ記述」部分へ適当な値を記述しましょう。
@@ -32,23 +30,23 @@ public class Task1_4 {
          String name = "alice";
          String pass = "pass";
         // ② 名前が「 alice 」、パスワードが「 pass 」であった場合、「 ログイン成功です 」と出力してください。
-        if (name == "alice" && pass == "pass"){
-           System.out.println("ログイン成功です。");
+        if (NAME == "alice" && PASS == "pass"){
+        System.out.println(CONST_MSG_SUCCESS);
         
         // ③ 名前のみ正しい場合、「パスワードに誤りがあります。」と出力してください。
-        } else if(name.equals("alice")){
-        System.out.println("パスワードに誤りがあります。");
+        } else if(NAME.equals("alice")){
+        System.out.println(CONST_MSG_ERROR_PASS);
 
 
         // ④ パスワードのみ正しい場合、「名前に誤りがあります。」と出力してください。
-        } else if(pass.equals("pass")){
-        System.out.println("名前に誤りがあります。");
+        } else if(PASS.equals("pass")){
+        System.out.println(CONST_MSG_ERROR_NAME);
 
 
 
         // ⑤ 名前もパスワードも間違っていた場合は、「入力情報に誤りがあります。」と出力してください。
         } else {
-            System.out.println("入力情報に誤りがあります。");
+            System.out.println(CONST_MSG_ERROR_INPUT);
             }
 
     }
